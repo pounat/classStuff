@@ -13,9 +13,10 @@
 <body>
 
   <h1>Click to Eat Sandwich</h1>
-  <h3 id="pbj">Peanut Butter Jelly</h3>
+  <h3 id="pbj">Peanut Butter Jelly 0</h3>
   <h3 id="grilledcheese">Grilled Cheese</h3>
   <h3 id="roastbeef">Roast Beef</h3>
+  <h6 id="reset">Reset</h6>
 
   <div id="image-div"></div>
 
@@ -31,7 +32,10 @@
       // ====================================================================
       // Here we create variables for tracking the number of sandwiches eaten
       // ...
-
+        
+        var pbjCounter = 0
+        var gcCounter = 0
+        var rbCounter = 0
 
       // ...
 
@@ -40,8 +44,45 @@
       // Here we create various on "click" functions which capture the clicks
       // Inside each click event is the code to create an alert, update the counter, then show the updated count.
       // ...
+      $("#pbj").on("click", function(){
+        alert ("You ate a PBJ sandwich!");
+        pbjCounter++;
+        if (pbjCounter === 1){
+          alert("You have eaten " + pbjCounter + " PBJ sandwich!")
+        }
+        else{
+          alert("You have eaten " + pbjCounter + " PBJ sandwiches!")
+        }
+      });
 
+      $("#grilledcheese").on("click", function(){
+        alert ("You ate a grilled cheese sandwich!");
+        gcCounter++;
+        if(gcCounter === 1){
+          alert("You have eaten " + gcCounter + " grilled cheese sandwich!")
+        }
+        else {
+          alert("You have eaten " + gcCounter + " grilled cheese sandwiches!")
+        }
+      });
 
+      $("#roastbeef").on("click", function(){
+        alert ("You ate a roastbeef sandwich!");
+        rbCounter++;
+        if(rbCounter === 1){
+          alert("You have eaten " + rbCounter + " roastbeef sandwich!")
+        }
+        else{
+          alert("You have eaten " + rbCounter + " roastbeef sandwiches!")
+        };
+
+        $("#reset").on("click", function(){
+          pbjCounter = 0
+          gcCounter = 0
+          rbCounter = 0
+        });
+        
+      });
       // ...
 
     });

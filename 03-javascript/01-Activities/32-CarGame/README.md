@@ -15,3 +15,6 @@
   * These letters also trigger a global function called `reWriteStats()` that logs the car's make, model, color, mileage, and `isWorking` status to the console.
 
 * **HINT:\*** You WILL need to use the `document.onkeyup()` function to collect input from the user's keyboard.
+
+DONE!!!!!!!!!!!!!
+
